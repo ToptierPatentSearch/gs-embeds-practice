@@ -10,45 +10,9 @@
     {{ page.title | default: "Practice Page" | escape }}
     | Top-tier Patent Search
   </title>
-
-  <style>
-    body.practice-layout-page {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      font-family: Arial, sans-serif;
-      color: #263747;
-      background: #f8fafc;
-    }
-
-    .practice-site-header {
-      background: #304a68;
-      color: white;
-      padding: 24px;
-    }
-
-    .practice-site-header a {
-      color: white;
-      margin-right: 20px;
-    }
-
-    .practice-layout-content {
-      flex: 1;
-      max-width: 1100px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 30px;
-      box-sizing: border-box;
-    }
-
-    .practice-site-footer {
-      background: #e8edf3;
-      text-align: center;
-      padding: 20px;
-    }
-  </style>
-
+<link rel="stylesheet"
+      href="{{ '/assets/css/practice.css' | relative_url }}">
+  
 </head>
 
 <body class="practice-layout-page">
