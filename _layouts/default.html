@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport"
         content="width=device-width, initial-scale=1">
 
@@ -10,9 +11,16 @@
     {{ page.title | default: "Practice Page" | escape }}
     | Top-tier Patent Search
   </title>
-<link rel="stylesheet"
-      href="{{ '/assets/css/practice.css' | relative_url }}">
-  
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet"
+        href="{{ '/assets/css/practice.css' | relative_url }}">
+
+  <!-- Shared JavaScript -->
+  <script defer
+          src="{{ '/assets/js/practice.js' | relative_url }}">
+  </script>
+
 </head>
 
 <body class="practice-layout-page">
