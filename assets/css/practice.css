@@ -37,3 +37,11 @@ body.practice-layout-page {
   text-align: center;
   padding: 20px;
 }
+
+/* Highlight the current navigation page */
+
+.practice-site-header a[aria-current="page"] {
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
