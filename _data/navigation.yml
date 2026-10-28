@@ -1,11 +1,13 @@
+- title: "Liquid Basics"
+  url: "/practice/liquid-basics.html"
+
+- title: "YAML Demo"
+  url: "/practice/data-services.html"
+
 - title: "Layout Demo"
   url: "/practice/layout-demo.html"
 
 - title: "Services Practice"
   url: "/practice/shared-services.html"
 
-- title: "YAML Demo"
-  url: "/practice/data-services.html"
 
-- title: "Liquid Basics"
-  url: "/practice/liquid-basics.html"
