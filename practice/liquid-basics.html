@@ -1,20 +1,10 @@
 ---
 title: Liquid Fundamentals Practice
-layout: null
+layout: default
 permalink: /practice/liquid-basics.html
 ---
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
-
-  <title>{{ page.title | escape }}</title>
-</head>
-
-<body>
+<section>
 
   <h1>{{ page.title | escape }}</h1>
 
@@ -39,13 +29,11 @@ permalink: /practice/liquid-basics.html
   <h2>Exercise C: Conditional Statement</h2>
 
   {% for service in services %}
-
     {% if service == "FTO" %}
       <p>
         FTO means Freedom to Operate.
       </p>
     {% endif %}
-
   {% endfor %}
 
   <h2>Exercise D: Filter</h2>
@@ -54,5 +42,4 @@ permalink: /practice/liquid-basics.html
     {{ "patent intelligence" | upcase }}
   </p>
 
-</body>
-</html>
+</section>
