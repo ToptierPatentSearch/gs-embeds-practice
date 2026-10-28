@@ -4,19 +4,18 @@
     {{ site.title | default: "Top-tier Patent Search" | escape }}
   </h1>
 
-  <nav aria-label="Main navigation">
+  <nav aria-label="Practice page navigation">
 
-    <a href="{{ '/' | relative_url }}">
-      Home
-    </a>
+    {% for item in site.data.navigation %}
 
-    <a href="{{ '/services.html' | relative_url }}">
-      Services
-    </a>
+      <a href="{{ item.url | relative_url }}"
+         {% if page.url == item.url %}
+           aria-current="page"
+         {% endif %}>
+        {{ item.title | escape }}
+      </a>
 
-    <a href="{{ '/contact.html' | relative_url }}">
-      Contact
-    </a>
+    {% endfor %}
 
   </nav>
 
