@@ -1,0 +1,74 @@
+
+---
+layout: default
+title: Patent Search Services Practice
+permalink: /practice/shared-services.html
+---
+
+<section>
+
+  <h1>Exercise 6: Patent Search Services</h1>
+
+  <p>
+    This page uses the same Jekyll layout,
+    header, footer, CSS, and JavaScript
+    as the Exercise 4 demonstration.
+  </p>
+
+  <h2>Test A: Page Title</h2>
+
+  <p>
+    Current page: {{ page.title | escape }}
+  </p>
+
+  <h2>Test B: YAML Service Data</h2>
+
+  <p>
+    Total services: {{ site.data.services | size }}
+  </p>
+
+  <ul>
+
+    {% for service in site.data.services %}
+
+      <li>
+        <strong>{{ service.name | escape }}</strong>
+        -
+        {{ service.description | escape }}
+      </li>
+
+    {% endfor %}
+
+  </ul>
+
+  <h2>Test C: Shared Components</h2>
+
+  <p>
+    The navigation above is generated
+    from _includes/header.html.
+  </p>
+
+  <p>
+    The copyright footer below is generated
+    from _includes/footer.html.
+  </p>
+
+  <p>
+    The page styling comes from
+    assets/css/practice.css.
+  </p>
+
+  <p>
+    The copyright year is updated by
+    assets/js/practice.js.
+  </p>
+
+  <h2>Test D: Navigate Between Pages</h2>
+
+  <p>
+    <a href="{{ '/practice/layout-demo.html' | relative_url }}">
+      Return to Exercise 4 - Layout Demonstration
+    </a>
+  </p>
+
+</section>
