@@ -1,14 +1,22 @@
 
 <article class="service-card">
+
   <h2>
     {{ include.title | default: "Patent Service" | escape }}
   </h2>
 
   <p>
-    {{ include.description | default: "Contact us for details." | escape }}
+    {{ include.description
+       | default: "Contact us for details."
+       | escape }}
   </p>
 
-  <a href="{{ '/contact.html' | relative_url }}">
-    Request Information
+  <a href="{{ include.url
+             | default: '/contact.html'
+             | relative_url }}">
+    {{ include.link_text
+       | default: "Request Information"
+       | escape }}
   </a>
+
 </article>
