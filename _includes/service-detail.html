@@ -1,0 +1,45 @@
+
+<article class="practice-service-page">
+
+  <p class="practice-service-label">
+    Top-tier Patent Search | Service Practice
+  </p>
+
+  <h1>
+    {{ include.service.title | escape }}
+  </h1>
+
+  <p class="practice-service-summary">
+    {{ include.service.summary | escape }}
+  </p>
+
+  <h2>Research Methodology</h2>
+
+  <ol>
+    {% for method in include.service.methods %}
+      <li>{{ method | escape }}</li>
+    {% endfor %}
+  </ol>
+
+  <h2>Typical Deliverables</h2>
+
+  <ul>
+    {% for item in include.service.deliverables %}
+      <li>{{ item | escape }}</li>
+    {% endfor %}
+  </ul>
+
+  <p class="practice-service-note">
+    Practice demonstration only.
+    Search scope and deliverables depend
+    on the agreed project requirements.
+    These research findings are not a legal opinion.
+  </p>
+
+  <p>
+    <a href="{{ '/practice/patent-services.html' | relative_url }}">
+      View all practice services
+    </a>
+  </p>
+
+</article>
