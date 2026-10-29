@@ -1,0 +1,52 @@
+
+- id: prior_art
+  title: "Prior Art & Patentability Search"
+  url: "/practice/services/prior-art.html"
+  summary: "Identify earlier patent and non-patent disclosures relevant to an invention."
+  methods:
+    - "Analyze technical features and terminology."
+    - "Develop keywords, synonyms, and IPC/CPC classifications."
+    - "Search patent databases and relevant technical literature."
+  deliverables:
+    - "Search strategy and coverage summary"
+    - "Relevant reference list with annotations"
+    - "Technical feature comparison where requested"
+
+- id: fto
+  title: "Freedom to Operate (FTO)"
+  url: "/practice/services/fto.html"
+  summary: "Identify potentially relevant patent rights for a defined product and market."
+  methods:
+    - "Define the product features and target jurisdictions."
+    - "Search potentially relevant patent claims and families."
+    - "Review available legal-status and jurisdictional data."
+  deliverables:
+    - "Potentially relevant patent-family list"
+    - "Preliminary claim-to-product comparison"
+    - "Research findings for review by patent counsel"
+
+- id: invalidity
+  title: "Invalidity Search"
+  url: "/practice/services/invalidity.html"
+  summary: "Locate earlier technical disclosures relevant to the validity of selected patent claims."
+  methods:
+    - "Analyze claim limitations and relevant dates."
+    - "Search patent and non-patent literature."
+    - "Compare the disclosures against selected claim features."
+  deliverables:
+    - "Prior-art reference list"
+    - "Claim-feature comparison chart"
+    - "Search methodology and evidence summary"
+
+- id: landscape
+  title: "Patent Landscape Analysis"
+  url: "/practice/services/landscape.html"
+  summary: "Study patent activity, technology categories, and competitive developments."
+  methods:
+    - "Define the technology scope and search criteria."
+    - "Collect and normalize relevant patent-family data."
+    - "Analyze classifications, applicants, and filing trends."
+  deliverables:
+    - "Technology classification summary"
+    - "Patent-family and applicant analysis"
+    - "Charts and technical intelligence report"
