@@ -4,7 +4,7 @@
 
 - title: "Service Cards"
   url: "/practice/services-demo.html"
-  order: 60
+  order: 20
 
 - title: "YAML Demo"
   url: "/practice/data-services.html"
