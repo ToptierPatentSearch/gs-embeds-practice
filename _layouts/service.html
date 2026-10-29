@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% assign matches = site.data.service_pages
+   | where: "id", page.service_id %}
+
+{% assign service = matches | first %}
+
+{% if service %}
+
+  {% include service-detail.html service=service %}
+
+  {{ content }}
+
+{% else %}
+
+  <section>
+    <h1>Service Not Found</h1>
+    <p>
+      Check the service_id in this page's
+      YAML front matter.
+    </p>
+  </section>
+
+{% endif %}
