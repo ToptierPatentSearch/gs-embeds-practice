@@ -1,48 +1,10 @@
 ---
 title: Reusable Service Cards Practice
-layout: null
+layout: default
 permalink: /practice/services-demo.html
 ---
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
-
-  <title>{{ page.title | escape }}</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 30px;
-      color: #263747;
-      background: #f8fafc;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-bottom: 35px;
-    }
-
-    .service-card {
-      padding: 24px;
-      background: white;
-      border: 1px solid #cbd5e1;
-      border-radius: 10px;
-    }
-
-    .service-card a {
-      color: #2256a5;
-    }
-  </style>
-</head>
-
-<body>
+<section>
 
   <h1>{{ page.title | escape }}</h1>
 
@@ -79,9 +41,7 @@ permalink: /practice/services-demo.html
   <h2>Part C: Default Values</h2>
 
   <div class="service-grid">
-
     {% include service-card.html %}
-
   </div>
 
   <h2>Part D: HTML Escaping</h2>
@@ -91,10 +51,11 @@ permalink: /practice/services-demo.html
     {% include service-card.html
        title="<em>FTO</em>"
        description="HTML tags should appear as text." %}
-{% include service-card.html
-   title="Classification Search"
-   description="Search patents using IPC and CPC classifications." %}
+
+    {% include service-card.html
+       title="Classification Search"
+       description="Search patents using IPC and CPC classifications." %}
+
   </div>
 
-</body>
-</html>
+</section>
