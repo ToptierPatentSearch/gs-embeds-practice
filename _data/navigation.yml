@@ -1,13 +1,19 @@
 - title: "Liquid Basics"
   url: "/practice/liquid-basics.html"
+  order: 10
+
+- title: "Service Cards"
+  url: "/practice/services-demo.html"
+  order: 20
 
 - title: "YAML Demo"
   url: "/practice/data-services.html"
+  order: 30
 
 - title: "Layout Demo"
   url: "/practice/layout-demo.html"
+  order: 40
 
 - title: "Services Practice"
   url: "/practice/shared-services.html"
-
-
+  order: 50
