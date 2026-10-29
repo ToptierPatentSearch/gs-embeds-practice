@@ -1,12 +1,15 @@
+
 <header class="practice-site-header">
 
   <h1>
     {{ site.title | default: "Top-tier Patent Search" | escape }}
   </h1>
 
+  {% assign nav_items = site.data.navigation | sort: "order" %}
+
   <nav aria-label="Practice page navigation">
 
-    {% for item in site.data.navigation %}
+    {% for item in nav_items %}
 
       <a href="{{ item.url | relative_url }}"
          {% if page.url == item.url %}
