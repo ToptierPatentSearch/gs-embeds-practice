@@ -1,0 +1,31 @@
+
+{% assign faq_group = site.data.service_faqs
+   | where: "service_id", include.service.id
+   | first %}
+
+{% if faq_group %}
+
+<section class="practice-service-faq"
+         aria-label="Frequently Asked Questions">
+
+  <h2>Frequently Asked Questions</h2>
+
+  {% for faq in faq_group.items %}
+
+    <details class="practice-faq-item">
+
+      <summary>
+        {{ faq.question | escape }}
+      </summary>
+
+      <div class="practice-faq-answer">
+        <p>{{ faq.answer | escape }}</p>
+      </div>
+
+    </details>
+
+  {% endfor %}
+
+</section>
+
+{% endif %}
