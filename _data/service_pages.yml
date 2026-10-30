@@ -3,6 +3,10 @@
   title: "Prior Art & Patentability Search"
   url: "/practice/services/prior-art.html"
   summary: "Identify earlier patent and non-patent disclosures relevant to an invention."
+  meta_title: "Prior Art and Patentability Research"
+  meta_description: "Explore prior-art and patentability research using technical concepts, IPC/CPC classifications, and patent and non-patent literature."
+  cta_label: "Discuss a Prior Art Search"
+  cta_url: "/contact.html"
   methods:
     - "Analyze technical features and terminology."
     - "Develop keywords, synonyms, and IPC/CPC classifications."
@@ -16,6 +20,10 @@
   title: "Freedom to Operate (FTO)"
   url: "/practice/services/fto.html"
   summary: "Identify potentially relevant patent rights for a defined product and market."
+  meta_title: "Freedom to Operate Patent Research"
+  meta_description: "Explore FTO research involving product features, target jurisdictions, patent claims, patent families, and available legal-status information."
+  cta_label: "Discuss FTO Research"
+  cta_url: "/contact.html"
   methods:
     - "Define the product features and target jurisdictions."
     - "Search potentially relevant patent claims and families."
@@ -29,6 +37,10 @@
   title: "Invalidity Search"
   url: "/practice/services/invalidity.html"
   summary: "Locate earlier technical disclosures relevant to the validity of selected patent claims."
+  meta_title: "Patent Invalidity Search"
+  meta_description: "Explore invalidity research using claim analysis, earlier patent disclosures, technical publications, and claim-feature comparisons."
+  cta_label: "Discuss an Invalidity Search"
+  cta_url: "/contact.html"
   methods:
     - "Analyze claim limitations and relevant dates."
     - "Search patent and non-patent literature."
@@ -42,6 +54,10 @@
   title: "Patent Landscape Analysis"
   url: "/practice/services/landscape.html"
   summary: "Study patent activity, technology categories, and competitive developments."
+  meta_title: "Patent Landscape and Technology Analysis"
+  meta_description: "Explore patent landscape research using patent families, IPC/CPC classifications, applicant analysis, and technology filing trends."
+  cta_label: "Discuss a Landscape Study"
+  cta_url: "/contact.html"
   methods:
     - "Define the technology scope and search criteria."
     - "Collect and normalize relevant patent-family data."
