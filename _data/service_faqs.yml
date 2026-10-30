@@ -1,0 +1,27 @@
+- service_id: prior_art
+  items:
+    - question: "Does a prior-art search guarantee patentability?"
+      answer: "No. A search identifies potentially relevant earlier disclosures, but it cannot guarantee that a patent will be granted."
+    - question: "Can non-patent literature be included?"
+      answer: "Yes. Depending on the agreed scope, the search may include technical publications, academic papers, and other non-patent literature."
+
+- service_id: fto
+  items:
+    - question: "Does an FTO search guarantee freedom to operate?"
+      answer: "No. Patent searching can help identify potentially relevant rights, but it cannot guarantee freedom from infringement risk."
+    - question: "Why are target jurisdictions important?"
+      answer: "Patent rights are territorial. Relevant claims, legal status, and risks can differ between jurisdictions."
+
+- service_id: invalidity
+  items:
+    - question: "Does finding prior art automatically invalidate a patent?"
+      answer: "No. The relevance of earlier disclosures must be assessed against the claims and applicable legal requirements."
+    - question: "Why are disclosure dates important?"
+      answer: "Relevant dates help determine whether a reference may qualify as prior art under the applicable patent law."
+
+- service_id: landscape
+  items:
+    - question: "What can a patent landscape reveal?"
+      answer: "It can reveal patterns in patent filings, technology classifications, applicants, and research activity within the selected dataset."
+    - question: "Does a patent landscape cover every invention?"
+      answer: "Not necessarily. Coverage depends on databases, search criteria, publication delays, and the defined technical scope."
