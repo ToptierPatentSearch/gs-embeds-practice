@@ -17,3 +17,7 @@
 - title: "Services Practice"
   url: "/practice/shared-services.html"
   order: 50
+
+- title: "Service Pages"
+  url: "/practice/patent-services.html"
+  order: 60
