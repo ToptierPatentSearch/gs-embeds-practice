@@ -7,10 +7,37 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1">
 
-  <title>
-    {{ page.title | default: "Practice Page" | escape }}
-    | Top-tier Patent Search
-  </title>
+  
+{% assign seo_title = page.title | default: site.title %}
+{% assign seo_description = page.description %}
+
+{% if page.service_id %}
+
+  {% assign seo_matches = site.data.service_pages
+     | where: "id", page.service_id %}
+
+  {% assign seo_service = seo_matches | first %}
+
+  {% if seo_service %}
+    {% assign seo_title = seo_service.meta_title | default: seo_title %}
+    {% assign seo_description = seo_service.meta_description | default: seo_description %}
+  {% endif %}
+
+{% endif %}
+
+<title>{{ seo_title | escape }} | {{ site.title | escape }}</title>
+
+{% if seo_description %}
+<meta name="description"
+      content="{{ seo_description | escape }}">
+{% endif %}
+
+<link rel="canonical"
+      href="{{ page.url | absolute_url }}">
+
+<!-- Prevent the practice website from being indexed -->
+<meta name="robots" content="noindex, nofollow">
+
 
   <!-- Shared CSS -->
   <link rel="stylesheet"
