@@ -1,0 +1,35 @@
+---
+layout: default
+title: Patent Search Service Pages
+permalink: /practice/patent-services.html
+---
+
+<section>
+
+  <h1>Patent Search Services</h1>
+
+  <p>
+    Explore the patent research services
+    offered by Top-tier Patent Search.
+  </p>
+
+  <p>
+    This practice page generates service cards
+    automatically from structured YAML data.
+  </p>
+
+  <div class="service-grid">
+
+    {% for service in site.data.service_pages %}
+
+      {% include service-card.html
+         title=service.title
+         description=service.summary
+         url=service.url
+         link_text="View Service Details" %}
+
+    {% endfor %}
+
+  </div>
+
+</section>
