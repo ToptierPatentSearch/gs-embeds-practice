@@ -1,0 +1,15 @@
+
+<section class="practice-service-actions"
+         aria-label="Next steps">
+
+  <a class="practice-cta practice-cta--primary"
+     href="{{ include.service.cta_url | default: '/contact.html' | relative_url }}">
+    {{ include.service.cta_label | default: "Discuss This Service" | escape }}
+  </a>
+
+  <a class="practice-cta practice-cta--secondary"
+     href="{{ '/practice/patent-services.html' | relative_url }}">
+    View All Services
+  </a>
+
+</section>
