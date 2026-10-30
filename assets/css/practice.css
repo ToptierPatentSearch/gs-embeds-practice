@@ -154,3 +154,65 @@ body.practice-layout-page {
   }
 
 }
+
+/* Exercise 10: Reusable service CTA */
+
+.practice-service-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.practice-cta {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+
+.practice-cta--primary,
+.practice-cta--primary:visited {
+  background: #304a68;
+  color: white;
+}
+
+.practice-cta--secondary,
+.practice-cta--secondary:visited {
+  background: white;
+  color: #304a68;
+  border: 2px solid #304a68;
+}
+
+.practice-cta:focus-visible {
+  outline: 3px solid #0c4788;
+  outline-offset: 3px;
+}
+
+/* Responsive mobile styling */
+
+@media (max-width: 640px) {
+
+  .practice-layout-content {
+    padding: 16px;
+  }
+
+  .practice-service-actions {
+    flex-direction: column;
+  }
+
+  .practice-cta {
+    width: 100%;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
