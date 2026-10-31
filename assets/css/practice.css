@@ -264,3 +264,78 @@ body.practice-layout-page {
 
 }
 
+/* Exercise 12: Service comparison table */
+
+.practice-comparison-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 24px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+}
+
+.practice-comparison-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  background: white;
+}
+
+.practice-comparison-table caption {
+  padding: 16px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.practice-comparison-table th,
+.practice-comparison-table td {
+  padding: 16px;
+  border-bottom: 1px solid #cbd5e1;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.practice-comparison-table thead th {
+  background: #304a68;
+  color: white;
+}
+
+.practice-comparison-table tbody th {
+  font-weight: bold;
+  min-width: 155px;
+}
+
+.practice-comparison-table tbody tr:nth-child(even) {
+  background: #f1f5f9;
+}
+
+.practice-comparison-table ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.practice-comparison-table li {
+  margin-bottom: 8px;
+}
+
+.practice-comparison-table a {
+  color: #2256a5;
+  font-weight: bold;
+}
+
+.practice-comparison-scroll:focus-visible {
+  outline: 3px solid #0c4788;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+
+  .practice-comparison-table th,
+  .practice-comparison-table td {
+    padding: 12px;
+  }
+
+}
+
