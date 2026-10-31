@@ -21,3 +21,7 @@
 - title: "Service Pages"
   url: "/practice/patent-services.html"
   order: 60
+
+- title: "Compare Services"
+  url: "/practice/service-comparison.html"
+  order: 70
