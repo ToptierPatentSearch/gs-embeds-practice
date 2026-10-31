@@ -216,3 +216,51 @@ body.practice-layout-page {
   }
 
 }
+
+/* Exercise 11: Reusable service FAQs */
+
+.practice-service-faq {
+  margin: 32px 0;
+}
+
+.practice-faq-item {
+  margin-bottom: 12px;
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.practice-faq-item summary {
+  padding: 16px 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.practice-faq-item[open] summary {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.practice-faq-answer {
+  padding: 4px 18px 14px;
+  line-height: 1.65;
+}
+
+.practice-faq-item summary:focus-visible {
+  outline: 3px solid #0c4788;
+  outline-offset: -3px;
+}
+
+@media (max-width: 640px) {
+
+  .practice-faq-item summary {
+    padding: 14px 12px;
+  }
+
+  .practice-faq-answer {
+    padding: 4px 12px 12px;
+  }
+
+}
+
