@@ -1,0 +1,83 @@
+
+<div class="practice-comparison-scroll"
+     role="region"
+     aria-label="Patent service comparison"
+     tabindex="0">
+
+  <table class="practice-comparison-table">
+
+    <caption>
+      Comparison of Patent Search Services
+    </caption>
+
+    <thead>
+      <tr>
+        <th scope="col">Service</th>
+        <th scope="col">Research Focus</th>
+        <th scope="col">Methodology</th>
+        <th scope="col">Typical Deliverables</th>
+        <th scope="col">FAQs and Details</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      {% for service in site.data.service_pages %}
+
+      {% assign faq_matches = site.data.service_faqs
+         | where: "service_id", service.id %}
+
+      {% assign faq_group = faq_matches | first %}
+
+      <tr>
+
+        <th scope="row">
+          {{ service.title | escape }}
+        </th>
+
+        <td>
+          {{ service.summary | escape }}
+        </td>
+
+        <td>
+          <ul>
+            {% for method in service.methods %}
+              <li>{{ method | escape }}</li>
+            {% endfor %}
+          </ul>
+        </td>
+
+        <td>
+          <ul>
+            {% for item in service.deliverables %}
+              <li>{{ item | escape }}</li>
+            {% endfor %}
+          </ul>
+        </td>
+
+        <td>
+
+          {% if faq_group %}
+            {{ faq_group.items | size }} FAQs
+          {% else %}
+            No FAQs listed
+          {% endif %}
+
+          <p>
+            <a href="{{ service.url | relative_url }}"
+               aria-label="View details for {{ service.title | escape }}">
+              View details
+            </a>
+          </p>
+
+        </td>
+
+      </tr>
+
+      {% endfor %}
+
+    </tbody>
+
+  </table>
+
+</div>
