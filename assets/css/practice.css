@@ -428,3 +428,102 @@ body.practice-layout-page {
   }
 
 }
+
+/* Exercise 14: Guided service selector */
+
+.practice-goal-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.practice-goal-controls label {
+  width: 100%;
+  font-weight: bold;
+}
+
+.practice-goal-controls select {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #8294a7;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.practice-goal-controls button {
+  padding: 12px 18px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 6px;
+  background: #304a68;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+}
+
+.practice-goal-prompt {
+  padding: 16px;
+  background: #e8edf3;
+  border-radius: 6px;
+}
+
+.practice-goal-result {
+  margin: 28px 0;
+}
+
+.practice-goal-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.practice-goal-card {
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.practice-goal-card h3 {
+  margin-top: 0;
+}
+
+.practice-goal-card a {
+  color: #2256a5;
+  font-weight: bold;
+}
+
+.practice-goal-controls[hidden],
+.practice-goal-prompt[hidden],
+.practice-goal-result[hidden] {
+  display: none !important;
+}
+
+.practice-goal-controls :focus-visible,
+.practice-goal-card a:focus-visible {
+  outline: 3px solid #0c4788;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+
+  .practice-goal-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .practice-goal-controls select,
+  .practice-goal-controls button {
+    width: 100%;
+  }
+
+  .practice-goal-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
