@@ -339,3 +339,92 @@ body.practice-layout-page {
 
 }
 
+
+/* Exercise 13: Service finder */
+
+.practice-finder-controls {
+  margin: 24px 0;
+}
+
+.practice-finder-controls label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.practice-finder-input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.practice-finder-input-row input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #8294a7;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.practice-finder-input-row button {
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 6px;
+  background: #304a68;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+}
+
+.practice-finder-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 24px 0;
+}
+
+.practice-finder-card {
+  padding: 24px;
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+}
+
+.practice-finder-card h2 {
+  margin-top: 0;
+}
+
+.practice-finder-card a {
+  color: #2256a5;
+  font-weight: bold;
+}
+
+.practice-finder-card[hidden],
+.practice-finder-controls[hidden],
+#practice-finder-empty[hidden] {
+  display: none !important;
+}
+
+.practice-finder-input-row :focus-visible,
+.practice-finder-card a:focus-visible {
+  outline: 3px solid #0c4788;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+
+  .practice-finder-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-finder-input-row {
+    flex-direction: column;
+  }
+
+  .practice-finder-input-row button {
+    width: 100%;
+  }
+
+}
