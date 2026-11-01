@@ -1,0 +1,37 @@
+
+- id: invention
+  label: "Assess a new invention"
+  explanation: "Investigate earlier disclosures relevant to a proposed invention."
+  recommendations:
+    - service_id: prior_art
+      reason: "A prior-art search can identify earlier patent and non-patent disclosures relevant to the invention."
+
+- id: launch
+  label: "Evaluate a product launch"
+  explanation: "Investigate potentially relevant patent rights before entering a market."
+  recommendations:
+    - service_id: fto
+      reason: "FTO research focuses on potentially relevant patent claims, jurisdictions, and available legal-status information."
+
+- id: challenge
+  label: "Investigate a patent's validity"
+  explanation: "Research earlier disclosures related to selected patent claims."
+  recommendations:
+    - service_id: invalidity
+      reason: "An invalidity search can identify prior art relevant to the claims under investigation."
+
+- id: market
+  label: "Understand a technology market"
+  explanation: "Examine patent activity and competitive technology developments."
+  recommendations:
+    - service_id: landscape
+      reason: "Patent landscape analysis can reveal filing trends, important applicants, and technology classifications."
+
+- id: classification
+  label: "Map a technology and its prior art"
+  explanation: "Combine technical-disclosure research with broader technology mapping."
+  recommendations:
+    - service_id: prior_art
+      reason: "Prior-art research can identify related technical disclosures and classification terms."
+    - service_id: landscape
+      reason: "Landscape analysis can reveal classification patterns, applicants, and filing activity."
