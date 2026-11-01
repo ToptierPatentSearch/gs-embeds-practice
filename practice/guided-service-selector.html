@@ -1,0 +1,115 @@
+---
+layout: default
+title: Guided Patent Search Service Selector
+description: Explore patent search services based on your research objectives.
+permalink: /practice/guided-service-selector.html
+---
+
+<section id="practice-guided-selector">
+
+  <h1>Guided Patent Search Service Selector</h1>
+
+  <p>
+    Select your primary research objective to
+    explore potentially relevant services.
+  </p>
+
+  <div id="practice-goal-controls"
+       class="practice-goal-controls"
+       hidden>
+
+    <label for="practice-goal-select">
+      What is your primary objective?
+    </label>
+
+    <select id="practice-goal-select">
+
+      <option value="">
+        Choose a research objective
+      </option>
+
+      {% for goal in site.data.service_goals %}
+        <option value="{{ goal.id | escape }}">
+          {{ goal.label | escape }}
+        </option>
+      {% endfor %}
+
+    </select>
+
+    <button id="practice-goal-reset"
+            type="button">
+      Reset Selection
+    </button>
+
+  </div>
+
+  <p id="practice-goal-prompt"
+     class="practice-goal-prompt"
+     hidden>
+    Select an objective to view suggested services.
+  </p>
+
+  <div id="practice-goal-results">
+
+    {% for goal in site.data.service_goals %}
+
+      <section class="practice-goal-result"
+               data-goal-id="{{ goal.id | escape }}">
+
+        <h2>{{ goal.label | escape }}</h2>
+
+        <p>{{ goal.explanation | escape }}</p>
+
+        <div class="practice-goal-grid">
+
+          {% for recommendation in goal.recommendations %}
+
+            {% assign matches = site.data.service_pages
+               | where: "id", recommendation.service_id %}
+
+            {% assign service = matches | first %}
+
+            {% if service %}
+
+              <article class="practice-goal-card">
+
+                <h3>{{ service.title | escape }}</h3>
+
+                <p>{{ recommendation.reason | escape }}</p>
+
+                <a href="{{ service.url | relative_url }}">
+                  View Service Details
+                </a>
+
+              </article>
+
+            {% endif %}
+
+          {% endfor %}
+
+        </div>
+
+      </section>
+
+    {% endfor %}
+
+  </div>
+
+  <p class="practice-service-note">
+    This tool provides preliminary, rule-based
+    suggestions. It does not establish patentability,
+    freedom to operate, or patent validity.
+    Final research scope requires professional review.
+  </p>
+
+  <p>
+    <a href="{{ '/practice/service-comparison.html' | relative_url }}">
+      Compare All Services
+    </a>
+  </p>
+
+</section>
+
+<script defer
+        src="{{ '/assets/js/guided-service-selector.js' | relative_url }}">
+</script>
