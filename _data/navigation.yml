@@ -29,3 +29,7 @@
 - title: "Find a Service"
   url: "/practice/service-finder.html"
   order: 80
+
+- title: "Guided Selector"
+  url: "/practice/guided-service-selector.html"
+  order: 90
