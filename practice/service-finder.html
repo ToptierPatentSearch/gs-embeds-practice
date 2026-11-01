@@ -1,0 +1,98 @@
+
+---
+layout: default
+title: Patent Search Service Finder
+description: Find patent search services using technical keywords.
+permalink: /practice/service-finder.html
+---
+
+<section id="practice-service-finder">
+
+  <h1>Find a Patent Search Service</h1>
+
+  <p>
+    Search by patent research objectives,
+    technical concepts, or deliverables.
+  </p>
+
+  <div id="practice-finder-controls"
+       class="practice-finder-controls"
+       hidden>
+
+    <label for="practice-finder-query">
+      Search services by keyword
+    </label>
+
+    <div class="practice-finder-input-row">
+
+      <input type="search"
+             id="practice-finder-query"
+             placeholder="e.g., FTO, claims, classification">
+
+      <button type="button"
+              id="practice-finder-clear">
+        Clear
+      </button>
+
+    </div>
+
+    <p id="practice-finder-count"
+       role="status"
+       aria-live="polite">
+    </p>
+
+  </div>
+
+  <div class="practice-finder-grid">
+
+    {% for service in site.data.service_pages %}
+
+      {% capture search_text %}
+        {{ service.title }}
+        {{ service.summary }}
+        {% for method in service.methods %}
+          {{ method }}
+        {% endfor %}
+        {% for item in service.deliverables %}
+          {{ item }}
+        {% endfor %}
+      {% endcapture %}
+
+      <article class="practice-finder-card"
+               data-search="{{ search_text | escape }}">
+
+        <h2>{{ service.title | escape }}</h2>
+
+        <p>{{ service.summary | escape }}</p>
+
+        <a href="{{ service.url | relative_url }}">
+          View Service Details
+        </a>
+
+      </article>
+
+    {% endfor %}
+
+  </div>
+
+  <p id="practice-finder-empty" hidden>
+    No services match your search.
+    Try another keyword.
+  </p>
+
+  <p>
+    Keyword matches are informational
+    and do not determine legal suitability.
+  </p>
+
+  <p>
+    <a href="{{ '/practice/service-comparison.html' | relative_url }}">
+      Compare All Four Services
+    </a>
+  </p>
+
+</section>
+
+<script defer
+        src="{{ '/assets/js/service-finder.js' | relative_url }}">
+</script>
