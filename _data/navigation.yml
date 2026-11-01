@@ -25,3 +25,7 @@
 - title: "Compare Services"
   url: "/practice/service-comparison.html"
   order: 70
+
+- title: "Find a Service"
+  url: "/practice/service-finder.html"
+  order: 80
