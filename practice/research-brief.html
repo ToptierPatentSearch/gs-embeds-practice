@@ -1,0 +1,179 @@
+
+---
+layout: default
+title: Patent Research Brief Generator
+description: Create a preliminary patent research brief using structured service data.
+permalink: /practice/research-brief.html
+---
+
+<section id="practice-brief-builder">
+
+  <h1>Patent Research Brief Generator</h1>
+
+  <p>
+    Prepare a preliminary research brief based
+    on your technical requirements and
+    research objectives.
+  </p>
+
+  <div id="practice-brief-controls"
+       class="practice-brief-controls"
+       hidden>
+
+    <div class="practice-brief-fields">
+
+      <label for="practice-brief-goal">
+        Research objective
+      </label>
+
+      <select id="practice-brief-goal">
+
+        <option value="">
+          Choose a research objective
+        </option>
+
+        {% for goal in site.data.service_goals %}
+
+        <option value="{{ goal.id | escape }}">
+          {{ goal.label | escape }}
+        </option>
+
+        {% endfor %}
+
+      </select>
+
+      <label for="practice-brief-technology">
+        Technology or product description
+      </label>
+
+      <textarea id="practice-brief-technology"
+                rows="5"
+                maxlength="1500"
+                placeholder="Describe a fictitious invention or product."></textarea>
+
+      <label for="practice-brief-jurisdictions">
+        Target jurisdictions
+      </label>
+
+      <input id="practice-brief-jurisdictions"
+             type="text"
+             maxlength="150"
+             placeholder="e.g., United States, Japan">
+
+      <label for="practice-brief-timing">
+        Relevant dates or project deadline
+      </label>
+
+      <input id="practice-brief-timing"
+             type="text"
+             maxlength="150"
+             placeholder="e.g., Before product launch">
+
+    </div>
+
+    <div class="practice-brief-actions">
+
+      <button id="practice-brief-generate"
+              type="button">
+        Generate Draft
+      </button>
+
+      <button id="practice-brief-copy"
+              type="button"
+              disabled>
+        Copy Draft
+      </button>
+
+      <button id="practice-brief-reset"
+              type="button">
+        Clear
+      </button>
+
+    </div>
+
+    <div id="practice-brief-output-group"
+         class="practice-brief-output-group"
+         hidden>
+
+      <label for="practice-brief-output">
+        Preliminary Research Brief
+      </label>
+
+      <textarea id="practice-brief-output"
+                rows="18"
+                readonly></textarea>
+
+    </div>
+
+    <p id="practice-brief-status"
+       role="status"
+       aria-live="polite">
+    </p>
+
+  </div>
+
+  <div id="practice-brief-reference"
+       class="practice-brief-reference">
+
+    <h2>Available Research Objectives</h2>
+
+    {% for goal in site.data.service_goals %}
+
+    <section class="practice-brief-rule"
+             data-goal-id="{{ goal.id | escape }}">
+
+      <h3 class="practice-brief-goal-title">
+        {{ goal.label | escape }}
+      </h3>
+
+      <p class="practice-brief-goal-explanation">
+        {{ goal.explanation | escape }}
+      </p>
+
+      <ul>
+
+        {% for recommendation in goal.recommendations %}
+
+          {% assign matches = site.data.service_pages
+             | where: "id", recommendation.service_id %}
+
+          {% assign service = matches | first %}
+
+          {% if service %}
+
+          <li class="practice-brief-recommendation">
+
+            <strong class="practice-brief-service-name">
+              {{ service.title | escape }}
+            </strong>
+
+            <p class="practice-brief-reason">
+              {{ recommendation.reason | escape }}
+            </p>
+
+          </li>
+
+          {% endif %}
+
+        {% endfor %}
+
+      </ul>
+
+    </section>
+
+    {% endfor %}
+
+  </div>
+
+  <p class="practice-service-note">
+    Practice demonstration only. The generated
+    brief does not constitute a legal opinion,
+    confirmed search strategy, or agreed
+    professional engagement.
+  </p>
+
+</section>
+
+<script defer
+        src="{{ '/assets/js/research-brief.js' | relative_url }}">
+</script>
