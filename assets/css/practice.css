@@ -623,3 +623,58 @@ body.practice-layout-page {
   }
 
 }
+
+/* Exercise 17: JSON research brief import */
+
+.practice-brief-import {
+  margin: 28px 0;
+  padding: 20px;
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+}
+
+.practice-brief-import h2 {
+  margin-top: 0;
+}
+
+.practice-brief-import label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.practice-brief-import input[type="file"] {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 16px;
+  font: inherit;
+}
+
+.practice-brief-import button {
+  min-height: 44px;
+  padding: 12px 20px;
+  background: #304a68;
+  border: 0;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+}
+
+.practice-brief-import :focus-visible {
+  outline: 3px solid #0c4788;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+
+  .practice-brief-import {
+    padding: 16px;
+  }
+
+  .practice-brief-import button {
+    width: 100%;
+  }
+
+}
