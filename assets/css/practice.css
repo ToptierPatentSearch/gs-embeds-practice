@@ -527,3 +527,99 @@ body.practice-layout-page {
   }
 
 }
+
+/* Exercise 15: Research brief generator */
+
+.practice-brief-controls {
+  margin: 24px 0;
+}
+
+.practice-brief-fields {
+  display: grid;
+  gap: 12px;
+}
+
+.practice-brief-fields label,
+.practice-brief-output-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.practice-brief-fields input,
+.practice-brief-fields select,
+.practice-brief-fields textarea,
+#practice-brief-output {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #8294a7;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.practice-brief-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.practice-brief-actions button {
+  min-height: 44px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 6px;
+  background: #304a68;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+.practice-brief-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.practice-brief-output-group {
+  margin: 24px 0;
+}
+
+#practice-brief-output {
+  margin-top: 10px;
+  font-family: Consolas, monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  background: #f8fafc;
+}
+
+.practice-brief-rule {
+  margin: 20px 0;
+  padding: 16px;
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+.practice-brief-controls[hidden],
+.practice-brief-reference[hidden],
+.practice-brief-output-group[hidden] {
+  display: none !important;
+}
+
+.practice-brief-controls :focus-visible {
+  outline: 3px solid #0c4788;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+
+  .practice-brief-actions {
+    flex-direction: column;
+  }
+
+  .practice-brief-actions button {
+    width: 100%;
+  }
+
+}
