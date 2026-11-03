@@ -33,3 +33,7 @@
 - title: "Guided Selector"
   url: "/practice/guided-service-selector.html"
   order: 90
+
+- title: "Research Brief"
+  url: "/practice/research-brief.html"
+  order: 100
