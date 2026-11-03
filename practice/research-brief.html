@@ -103,6 +103,30 @@ permalink: /practice/research-brief.html
 
 </div>
 
+<div class="practice-brief-import">
+
+  <h2>Restore a Saved Research Brief</h2>
+
+  <p>
+    Select a JSON file exported by this
+    Research Brief Generator.
+  </p>
+
+  <label for="practice-brief-import-file">
+    Saved JSON file
+  </label>
+
+  <input id="practice-brief-import-file"
+         type="file"
+         accept=".json,application/json">
+
+  <button id="practice-brief-import-button"
+          type="button">
+    Load JSON
+  </button>
+
+</div>
+
     <div id="practice-brief-output-group"
          class="practice-brief-output-group"
          hidden>
@@ -188,4 +212,8 @@ permalink: /practice/research-brief.html
 
 <script defer
         src="{{ '/assets/js/research-brief.js' | relative_url }}">
+</script>
+
+<script defer
+        src="{{ '/assets/js/research-brief-import.js' | relative_url }}">
 </script>
