@@ -96,6 +96,12 @@ permalink: /practice/research-brief.html
     Download JSON
   </button>
 
+<button id="practice-brief-print"
+        type="button"
+        disabled>
+  Print / Save PDF
+</button>
+
   <button id="practice-brief-reset"
           type="button">
     Clear
@@ -195,6 +201,14 @@ permalink: /practice/research-brief.html
 
       </ul>
 
+<div id="practice-brief-print-document"
+     class="practice-brief-print-document"
+     aria-label="Printable research brief">
+
+  <pre id="practice-brief-print-text"></pre>
+
+</div>
+
     </section>
 
     {% endfor %}
@@ -216,4 +230,8 @@ permalink: /practice/research-brief.html
 
 <script defer
         src="{{ '/assets/js/research-brief-import.js' | relative_url }}">
+</script>
+
+<script defer
+        src="{{ '/assets/js/research-brief-print.js' | relative_url }}">
 </script>
